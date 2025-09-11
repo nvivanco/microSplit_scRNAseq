@@ -1,9 +1,9 @@
+#!/bin/bash
 #SBATCH --job-name=download_sra
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=2
-#SBATCH --partition=owner,normal
-#SBATCH --account=default
+#SBATCH --partition=normal
 #SBATCH --time=2:00:00
 
 #Example usage: ./download_sra.sh SRP SRP099835 $SCRATCH/data/sra
