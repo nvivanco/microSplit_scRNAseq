@@ -35,7 +35,7 @@ if [ "$file_type" = "SRP" ]; then
 elif [ "$file_type" = "SRA" ]; then
         fasterq-dump -O $output_dir $accession
 else
-    echo "Invalid argument: $argument"
+    echo "Invalid argument: $file_type"
     echo "Usage: $0 <option1|option2>"
     exit 1
 fi
