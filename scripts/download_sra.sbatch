@@ -4,9 +4,9 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=2
 #SBATCH --partition=normal
-#SBATCH --time=2:00:00
+#SBATCH --time=24:00:00
 
-#Example usage: ./download_sra.sh SRP SRP099835 $SCRATCH/data/sra
+#Example usage: sbatch download_sra.sh SRP SRP099835 $SCRATCH/data/sra
 #$1: file_type (SRA or SRP)
 #$2: accession number
 #$3: outputdir
