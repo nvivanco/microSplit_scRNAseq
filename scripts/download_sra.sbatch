@@ -12,10 +12,10 @@
 #$3: outputdir
 
 ml biology load sra-tools
-# Check if an argument is provided
-if [ $# -eq 0 ]; then
-    echo "Error: No argument provided."
-    echo "Usage: $0 <argument>"
+# Check if exactly 3 arguments are provided
+if [ $# -ne 3 ]; then
+    echo "Error: Invalid number of arguments provided."
+    echo "Usage: $0 <file_type> <accession> <output_dir>"
     exit 1
 fi
 # Store the argument in a variable
