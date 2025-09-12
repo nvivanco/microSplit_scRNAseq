@@ -8,7 +8,7 @@ Run `setup.sh` to set default paths
 source setup.sh
 ```
 
-To obtain container locally (if not already downloaded)
+To obtain container locally (if not already downloaded) (Note for covert lab: we already have it on OAK)
 ```
 singularity pull docker://scr.svc.stanford.edu/khoang99/containers/scrna:latest
 # set RUN environment variable to execute singularity run
