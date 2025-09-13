@@ -17,15 +17,15 @@
 
 
 GENOME_INDEX=$1 # $PROCESSED_DATA/ref_index/STAR_bsub_genome_index
-BC_UMI_READS=$2 # $RAW_DATA/sra/SRP266243/SRR11940660/SRR11940660_2.fastq
-CDNA_READS=$3 # $RAW_DATA/sra/SRP266243/SRR11940660/SRR11940660_1.fastq
+CDNA_READS=$2 # $RAW_DATA/sra/SRP266243/SRR11940660/SRR11940660_1.fastq
+BC_UMI_READS=$3 # $RAW_DATA/sra/SRP266243/SRR11940660/SRR11940660_2.fastq
 BC_R2_R3=$4 # $RAW_DATA/barcodes/SRP266243/barcodes_r2_r3_solo.txt
 BC_R1=$5 # $RAW_DATA/barcodes/SRP266243/barcodes_r1_solo.txt
 OUTPUT_DIR=$6 #$PROCESSED_DATA/SRP266243/SRR11940660/STAR_output
 
 $RUN STAR --genomeDir $GENOME_INDEX \
           --runThreadN 12 \
-          --readFilesIn $BC_UMI_READS $CDNA_READS \
+          --readFilesIn $CDNA_READS $BC_UMI_READS  \
           --soloType CB_UMI_Complex \
           --soloCBposition 0_10_0_17 0_48_0_55 0_78_0_85 \
           --soloUMIposition 0_0_0_9 \
