@@ -18,7 +18,7 @@ mkdir -p "$OUTPUT_DIR"
 $RUN STAR --runMode genomeGenerate \
      --runThreadN 12 \
      --genomeDir $OUTPUT_DIR \
-     –-genomeSAindexNbases 10 \
+     --genomeSAindexNbases 10 \
      --genomeFastaFiles $REF_GENOME \
      --sjdbGTFfile $GTF
 
