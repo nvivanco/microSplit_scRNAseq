@@ -23,7 +23,7 @@ BC_R2_R3=$4 # $RAW_DATA/barcodes/SRP266243/barcodes_r2_r3_solo.txt
 BC_R1=$5 # $RAW_DATA/barcodes/SRP266243/barcodes_r1_solo.txt
 OUTPUT_DIR=$6 # $PROCESSED_DATA/SRP266243/SRR11940660/STAR_Bsub_ref_outs
 
-mkdir -p "OUTPUT_DIR"
+mkdir -p "$OUTPUT_DIR"
 
 PREFIX=$OUTPUT_DIR/STAR_OUTPUT_
 
