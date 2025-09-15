@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Usage:  ./star_index.sh <input_fasta> <input_gtf> <output_folder>
-# Example: /star_index.sh $ECOLI_REF_GENOME $ECOLI_GTF $PROCESSED_DATA/ref_index/STAR_ecoli_genome_index
+# Example: ./star_index.sh $ECOLI_REF_GENOME $ECOLI_GTF $PROCESSED_DATA/ref_index/STAR_ecoli_genome_index
 
 # Check for input directory
 if [ $# -ne 3 ]; then
