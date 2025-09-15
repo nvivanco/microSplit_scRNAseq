@@ -13,7 +13,7 @@
 #        $RAW_DATA/sra/SRP266243/SRR11940660/SRR11940660_2.fastq \
 #        $RAW_DATA/barcodes/SRP266243/barcodes_r2_r3_solo.txt \
 #        $RAW_DATA/barcodes/SRP266243/barcodes_r1_solo.txt \
-#        $PROCESSED_DATA/SRP266243/SRR11940660/STAR_output
+#        $PROCESSED_DATA/SRP266243/SRR11940660/STAR_Bsub_ref_outs
 
 
 GENOME_INDEX=$1 # $PROCESSED_DATA/ref_index/STAR_bsub_genome_index
@@ -21,7 +21,11 @@ CDNA_READS=$2 # $RAW_DATA/sra/SRP266243/SRR11940660/SRR11940660_1.fastq
 BC_UMI_READS=$3 # $RAW_DATA/sra/SRP266243/SRR11940660/SRR11940660_2.fastq
 BC_R2_R3=$4 # $RAW_DATA/barcodes/SRP266243/barcodes_r2_r3_solo.txt
 BC_R1=$5 # $RAW_DATA/barcodes/SRP266243/barcodes_r1_solo.txt
-OUTPUT_DIR=$6 # $PROCESSED_DATA/SRP266243/SRR11940660/STAR_output
+OUTPUT_DIR=$6 # $PROCESSED_DATA/SRP266243/SRR11940660/STAR_Bsub_ref_outs
+
+mkdir -p "OUTPUT_DIR"
+
+PREFIX=$OUTPUT_DIR/STAR_OUTPUT_
 
 $RUN STAR --genomeDir $GENOME_INDEX \
           --runThreadN 12 \
@@ -40,7 +44,7 @@ $RUN STAR --genomeDir $GENOME_INDEX \
           --alignSJDBoverhangMin 1000 \
           --alignSJoverhangMin 1000 \
           --outSAMtype BAM Unsorted \
-          --outFileNamePrefix $OUTPUT_DIR
+          --outFileNamePrefix $PREFIX
 
 #          --alignSJDBoverhangMin 1000 \ essentially disable
 #          --alignSJoverhangMin 1000 \ essentially disable
