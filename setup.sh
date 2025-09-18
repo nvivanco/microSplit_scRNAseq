@@ -10,5 +10,11 @@ export BSUB_REF_GENOME="$RAW_DATA/references/bsubtilis/GCF_000009045.1_ASM904v1_
 export BSUB_GTF="$RAW_DATA/references/bsubtilis/GCF_000009045.1_ASM904v1_genomic.gtf"
 export BSUB_REF_TRNX="$RAW_DATA/references/bsubtilis/GCF_000005845.GCF_000009045.1_ASM904v1_cds_from_genomic.fna"
 
+
+export BSUB_PY79_REF_GENOME="$RAW_DATA/references/bsubtilis/bacillus_subtilis_py79.reformatted.fna"
+export BSUB_PY79_GTF="$RAW_DATA/references/bsubtilis/bacillus_subtilis_py79.gtf"
+#TODO: download cds file
+#export BSUB_PY79_REF_TRNX="$RAW_DATA/references/bsubtilis/..."
+
 # run with singularity
 export RUN="singularity run $OAK/scRNAseq/envs/scrna_latest.sif"
