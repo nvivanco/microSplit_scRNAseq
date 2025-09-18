@@ -17,13 +17,15 @@ export RUN="singularity run scrna_latest.sif"
 ## Usage
 
 
-## Run Jupyter Notebook
+## Run Jupyter Notebook/ Jupyter Lab
 
 To run Jupyter Notebook with container, first run jupyter server on your compute node (Sherlock), ideally in a new `screen` (e.g., `screen -S notebook`)
 
 ```
 # port can be set to any number from 20000 to 30000, pick a random one to not overlap with other users
 $RUN jupyter notebook --port=23232 --no-browser --ip=127.0.0.1
+# If you want jupyter lab instead 
+$RUN jupyter lab --port=23232 --no-browser --ip=127.0.0.1
 ```
 
 Now, on your local computer, login to Sherlock with ssh forwarding
