@@ -30,6 +30,8 @@ wget -P "$output_dir/references/bsubtilis" https://ftp.ncbi.nlm.nih.gov/genomes/
 wget -P "$output_dir/references/bsubtilis" https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/009/045/GCF_000009045.1_ASM904v1/GCF_000009045.1_ASM904v1_genomic.gtf.gz
 wget -P "$output_dir/references/bsubtilis" https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/009/045/GCF_000009045.1_ASM904v1/GCF_000009045.1_ASM904v1_cds_from_genomic.fna.gz
 
+#TODO: add script for downloading B.subtilis strain YP79 
+
 # --- Unzip all downloaded files ---
 echo "Unzipping downloaded files..."
 gunzip "$output_dir/references/ecoli"/*.gz
