@@ -113,7 +113,7 @@ TODO: add gff -> gtf conversion here
 3. Run `fastqc.sbatch` on SRR11940660 (B. subtilis experiment):  
 ```bash
 sbatch fastqc.sbatch $RAW_DATA/sra/SRP266243/SRR11940660 \
-                     $PROCESSED_DATA/SRP266243/SRR11940660/fastqc_out
+                     $PROCESSED_DATA/SRP266243/SRR11940660/fastqc_outs
 ```
 
 4. Index reference genomes  
