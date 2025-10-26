@@ -108,7 +108,9 @@ Copy barcodes from Supplementary information to text files in `$RAW_DATA/barcode
 
 2. Convert file formats  
 
-TODO: add gff -> gtf conversion here  
+```bash
+gffread $BSUB_PY79_GFF -g $BSUB_PY79_REF_GENOME -T -v -o $BSUB_PY79_GTF
+```
 
 3. Run `fastqc.sbatch` on SRR11940660 (B. subtilis experiment):  
 ```bash

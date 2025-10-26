@@ -13,6 +13,8 @@ export BSUB_REF_TRNX="$RAW_DATA/references/bsubtilis/GCF_000005845.GCF_000009045
 
 export BSUB_PY79_REF_GENOME="$RAW_DATA/references/bsubtilis/bacillus_subtilis_py79.reformatted.fna"
 export BSUB_PY79_GTF="$RAW_DATA/references/bsubtilis/bacillus_subtilis_py79.gtf"
+export BSUB_PY79_GFF="$RAW_DATA/references/bsubtilis/bacillus_subtilis_py79.gff"
+
 #TODO: download cds file
 #export BSUB_PY79_REF_TRNX="$RAW_DATA/references/bsubtilis/..."
 
